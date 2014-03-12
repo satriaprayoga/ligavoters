@@ -1,11 +1,13 @@
 Ligavoters::Application.routes.draw do
+  devise_for :admins, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get "home/index"
 
-  namespace :admin do
-    get "dashboard/index"
-    resources :admin, :only => [:show, :edit, :update]
-    resources :articles, :only => [:index, :show, :destroy]
-  end
+ # namespace :admin do
+ #   get "dashboard/index"
+ #   resources :admin, :only => [:show, :edit, :update]
+ #   resources :articles, :only => [:index, :show, :destroy]
+ # end
 
   namespace :redactor do
     resources :articles,  :only=>[:show, :edit, :create, :destroy]
