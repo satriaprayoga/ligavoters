@@ -43,6 +43,13 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bcrypt', '3.1.7'
 gem 'bcrypt-ruby', '3.1.5'
 
+# WYSISYG
+gem 'rich'
+
+# uploader
+gem 'paperclip'
+gem 'carrierwave'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
