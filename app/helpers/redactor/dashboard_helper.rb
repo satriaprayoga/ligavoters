@@ -1,2 +1,0 @@
-module Redactor::DashboardHelper
-end

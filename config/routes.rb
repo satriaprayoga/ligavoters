@@ -1,4 +1,5 @@
 Ligavoters::Application.routes.draw do
+  devise_for :redactors
   devise_for :admins, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get "home/index"
@@ -9,9 +10,9 @@ Ligavoters::Application.routes.draw do
  #   resources :articles, :only => [:index, :show, :destroy]
  # end
 
-  namespace :redactor do
-    resources :articles,  :only=>[:show, :edit, :create, :destroy]
-  end
+ # namespace :redactor do
+ #  resources :articles,  :only=>[:show, :edit, :create, :destroy]
+ # end
 
   root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
